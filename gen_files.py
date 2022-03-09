@@ -24,7 +24,6 @@ response.html.render(sleep=1)
 all = response.html.find('a.h-5', containing=str(args.number))
 
 found = False
-print(all)
 for a in all:
     if a.text.split('.')[0] == str(args.number):
         # title = f"{args.number}. {a.contents[-1]}"
@@ -35,6 +34,7 @@ for a in all:
 if not found:
     print("Fail to find the problem!!!")
     exit(-1)
+    
 problem_folder = os.path.join(FOLDER, title)
 
 if not os.path.exists(problem_folder):
