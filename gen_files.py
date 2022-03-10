@@ -29,7 +29,8 @@ for a in all:
         # title = f"{args.number}. {a.contents[-1]}"
         title = a.text
         problem_url = leetcode_url + a.attrs['href']
-        code_filename = a.attrs['href'].split('problems')[-1][1:] 
+        code_filename = a.attrs['href'].split('problems')[1].strip('/')
+        
         found = True
 if not found:
     print("Fail to find the problem!!!")
