@@ -8,7 +8,7 @@ class Solution:
         while cur < last_idx:
             if cur + nums[cur] >= last_idx:
                 return steps+1
-            for i in range(cur+1, min(last_idx+1, farthest+1)):
+            for i in range(cur+1, min(last_idx, farthest)+1):
                 if i + nums[i] >= farthest:
                     farthest = i + nums[i]
                     cur = i
