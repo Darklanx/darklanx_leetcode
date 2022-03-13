@@ -34,6 +34,7 @@ for a in all:
         found = True
 if not found:
     print("Fail to find the problem!!!")
+    print(all)
     exit(-1)
     
 problem_folder = os.path.join(FOLDER, title)

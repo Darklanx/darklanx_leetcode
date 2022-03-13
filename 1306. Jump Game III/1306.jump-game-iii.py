@@ -6,6 +6,7 @@ class Solution:
         
         def valid(index):
             return index >= 0 and index < len(arr)
+            
         def explore(pos: int) -> bool:
             if pos in visited:
                 return False
