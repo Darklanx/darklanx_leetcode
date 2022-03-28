@@ -2,7 +2,6 @@ class StreamChecker:
 
     def __init__(self, words: List[str]):
         self.trie = dict()
-        self.nodes = []
         self.reverse_stream = deque()
         for w in words:
             cur = self.trie
@@ -26,26 +25,6 @@ class StreamChecker:
             
         return False
             
-#         new_nodes = []
-#         found = False
-        
-#         for node in self.nodes:
-#             if letter in node:
-#                 new_nodes.append(node[letter])
-#                 if '$' in node[letter]:
-#                     found = True
-        
-#         if letter in self.trie:
-#             new_nodes.append(self.trie[letter])
-#             if '$' in self.trie[letter]:
-#                 found = True
-#         self.nodes = new_nodes
-#         return found
-                
-'''
-cd f kl
-a
-'''   
         
 
 
